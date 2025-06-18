@@ -1,211 +1,88 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<!--[if IE 9 ]>
+<html class="no-js ie9 lt-ie10" lang="{{ locale_name }}">
+<![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="{{ locale_name }}"><!--<![endif]-->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Cache-Control" content="no-store" />
-  <title>Obat Pria Tahan Lama - Diskon 50%</title>
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREAAAAAERERERAAAAERAAABEQAAAREAAAERAAABEQAAAREAAAERAQABEQAAAREBEAERAAABEQERERAAAAERARERAAAAAREAAAAAAAABEQAAAAEAAAEREREREQAAABEREREQAAAAAAAAAAAAD//wAA//8AAOAfAADgDwAAx8cAAMfHAADHxwAAxccAAMTHAADEDwAAxB8AAMf/AADH9wAAwAcAAOAPAAD//wAA" rel="icon" type="image/x-icon">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-      padding: 20px;
-      position: relative;
-    }
+  <title>Top-News</title>
 
-    .container {
-      max-width: 700px;
-      text-align: center;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    .hero {
-      background: linear-gradient(to bottom, #222, #000);
-      padding: 40px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255,255,255,0.1);
-    }
+        <style>
+        .img-money {
+          width: 100%;
+          padding: 10px 0px;
+        }
+        .button {
+          background-color: red;
+          border: none;
+          color: white;
+          padding: 15px 15px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 15px;
+          
+          -moz-transition:all 0.5s ease-in-out;
+          -webkit-transition:all 0.5s ease-in-out;
+          -o-transition:all 0.5s ease-in-out;
+          -ms-transition:all 0.5s ease-in-out;
+          transition:all 0.5s ease-in-out;
+          -moz-animation:blink normal 1.5s infinite ease-in-out;
+          /* Firefox */
+          -webkit-animation:blink normal 1.5s infinite ease-in-out;
+          /* Webkit */
+          -ms-animation:blink normal 1.5s infinite ease-in-out;
+          /* IE */
+          animation:blink normal 1.5s infinite ease-in-out;
+          /* Opera */
+        }
+        .shopify-section {
+            display: none;
+        }
+        .safe-content {
+            padding: 25px;
 
-    .hero h1 {
-      font-size: 2rem;
-      color: #ffcc00;
-      margin-bottom: 10px;
-    }
+        }
+        .masthead {
+            padding-top: 2.5rem;
+        }
+        .SELANJUTNYA {
+            margin: 1rem 0;
+        }
+    </style>
 
-    .hero h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: #ccc;
-    }
-
-    .badge {
-      background: #ff0000;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    .content {
-      margin-top: 30px;
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: left;
-    }
-
-    .content p {
-      margin-bottom: 15px;
-    }
-
-    .guarantee {
-      background-color: #003300;
-      color: #99ff99;
-      padding: 15px;
-      border-left: 5px solid #00cc66;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 40px;
-    }
-
-    /* Floating CTA Button */
-    .cta-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #ffcc00;
-      color: #000;
-      border: none;
-      padding: 15px 25px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s ease;
-      z-index: 999;
-    }
-
-    .cta-button:hover {
-      background-color: #ffaa00;
-    }
-
-    /* Fake Notification Style (Top Right) */
-    .fake-notif {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #222;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      opacity: 0;
-      transition: all 0.5s ease;
-      z-index: 1000;
-      font-size: 0.95rem;
-    }
-
-    .fake-notif.show {
-      opacity: 1;
-    }
-  </style>
+<link rel="me" href="https://www.blogger.com/profile/07052707307756354501" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
+
 <body>
-  <div class="container">
-    <section class="hero">
-      <h1>🔥 Tahan Lama di Ranjang!</h1>
-      <h2>Rasakan Perubahan Drastis Hanya Dalam 15 Menit 🔥</h2>
-      <div class="badge">DISKON 50% • HARI INI SAJA!</div>
-    </section>
-
-    <section class="content">
-      <p>Apakah Anda sering merasa tidak percaya diri karena durasi yang singkat saat bersama pasangan?</p>
-      <p><strong>Solusinya ada di sini!</strong> Obat herbal pria ini sudah membantu ribuan pria untuk tampil lebih percaya diri dan tahan lama saat berhubungan intim.</p>
-      <ul>
-        <li>✅ Efek cepat hanya dalam 15-30 menit</li>
-        <li>✅ Tanpa efek samping</li>
-        <li>✅ Aman & sudah teruji</li>
-        <li>✅ Dikemas rapi dan rahasia</li>
-      </ul>
-
-      <div class="guarantee">
-        💰 100% Uang Kembali Jika Tidak Ada Hasil!
-      </div>
-    </section>
-
-    <div class="footer">
-      © 2025 - Produk Herbal Pria | Privasi & Kerahasiaan Dijamin
+<div class="container">
+    <div class="safe-content">
+        <p class="h3 text-center">Jaminan uang kembali 100%</p>
+        <p class="h3 text-center">Diskon 50% jika Anda membeli sekarang</p>
+        <p class="lead text-center">Hanya untuk dewasa!! (18+)</p>
+        <br>
     </div>
-  </div>
 
-  <!-- Floating CTA Button -->
-  <a class="cta-button" id="waButton" href="https://uh5f114a8buh.uewhbgfvds.cc/?target=-7EBNQCgQAAAcswQIDkZkABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=id01">Pesan Sekarang</a>
+    <center>
+        <img id="img-safe" width="107" height="68" src="https://prasastiselaras.com/wp-content/uploads/2023/08/3-panah-ke-bawah-animasi-1.gif">
+        <br>
+      
+   
+        <a href="https://uh5f114a8buh.uewhbgfvds.cc/?target=-7EBNQCgQAAAcswQIDkZkABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=id01" class="btn btn-danger">PESAN SEKARANG</a>
+    </center>
 
-  <!-- Notifikasi Palsu -->
-  <div id="notif" class="fake-notif">💬 A***i dari Jakarta baru saja membeli produk ini</div>
-
-  <script>
-    // Notifikasi Palsu muncul berkala
-    const notif = document.getElementById("notif");
-    const fakeNames = ["A**i dari Jakarta", "R**l dari Surabaya", "B**i dari Bandung", "A**f dari Bekasi", "Fa**i dari Tangerang"];
-
-    function showFakeNotif() {
-      const randomName = fakeNames[Math.floor(Math.random() * fakeNames.length)];
-      notif.textContent = `💬 ${randomName} baru saja membeli produk ini`;
-      notif.classList.add("show");
-
-      setTimeout(() => {
-        notif.classList.remove("show");
-      }, 4000);
-    }
-
-    setInterval(showFakeNotif, 8000); // Muncul tiap 8 detik
-    
-      // Blok klik kanan
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // Blok shortcut yang biasa dipakai untuk inspect
-  document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.keyCode === 123) {
-      e.preventDefault();
-    }
-    // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
-    if (e.ctrlKey && (e.shiftKey && (e.key === 'I' || e.key === 'J')) || e.key === 'u' || e.key === 's') {
-      e.preventDefault();
-    }
-  });
-
-  // Blok drag dan select
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  });
-
-  document.addEventListener('selectstart', function(e) {
-    e.preventDefault();
-  });
-  </script>
+    <p class="lead text-center">GRATIS ONGKIR & BISA COD</p>
+</div>
 </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://beritapria.com/pixel/links_oles_quiz_id.js"></script>
 </html>
