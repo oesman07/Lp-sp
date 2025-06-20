@@ -75,7 +75,7 @@
         <br>
       
    
-        <a href="https://uh5f114a8buh.uewhbgfvds.cc/?target=-7EBNQCgQAAAcswQIDkZkABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=id01" class="btn btn-danger">PESAN SEKARANG</a>
+        <a href="https://uh5f114a8buh.uewhbgfvds.cc/?target=-7EBNQCgQAAAcswQID25UABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&al=104071" class="btn btn-danger">PESAN SEKARANG</a>
     </center>
 
     <p class="lead text-center">GRATIS ONGKIR & BISA COD</p>
@@ -84,5 +84,35 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://beritapria.com/pixel/links_oles_quiz_id.js"></script>
+    <script>
+    function getUrlParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    function replaceUrlParam(url, paramName, paramValue) {
+      var pattern = new RegExp('('+paramName+'=).*?(&|$)'),
+          newUrl = url.replace(pattern,'$1' + paramValue + '$2');
+      if ( newUrl == url ) {
+        newUrl = newUrl + (newUrl.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue;
+      }
+      return newUrl;
+    }
+
+    const subacc = getUrlParam('subacc');
+    const button = document.getElementById('ctaBtn');
+    const targetUrl = "https://uh5f114a8buh.uewhbgfvds.cc/?target=-7EBNQCgQAAAcswQID25UABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&al=104071"; // Ganti ini dengan URL kamu
+
+    if (subacc) {
+      button.href = replaceUrlParam(targetUrl, 'subacc', subacc);
+    } else {
+      button.href = targetUrl;
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+
+  </script>
 </html>
